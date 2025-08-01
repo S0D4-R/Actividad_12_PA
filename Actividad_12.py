@@ -19,7 +19,7 @@ try:
 
     #promedio
     print("-----El promedio de cada alumno fue:\n\n")
-    for id, student in student_compendium:
+    for id, student in student_compendium.items():
         total_scr = 0
         counter = 0
         for score in student["score_avg"]:
@@ -33,3 +33,5 @@ except ZeroDivisionError:
     print("No puede dividir por cero...")
 except Exception as e:
     print("Hubo un error: {}".format(e))
+finally:
+    print("Gracias por usar el programa")
