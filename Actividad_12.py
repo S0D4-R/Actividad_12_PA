@@ -16,6 +16,17 @@ try:
             "nombre": name,
             "score_avg": score_compendium
         }
+
+    #promedio
+    print("-----El promedio de cada alumno fue:\n\n")
+    for id, student in student_compendium:
+        total_scr = 0
+        counter = 0
+        for score in student["score_avg"]:
+            counter += 1
+            total_scr += score
+        total_scr = total_scr/counter
+        print(f"{student["nombre"]} tiene un promedio general de {total_scr} ")
 except ValueError:
     print("Lo que usted colocó no es un número")
 except ZeroDivisionError:
